@@ -1,0 +1,26 @@
+/* browser css reset */
+@import "../FRONTEND/assets/CSS/reset.scss";
+
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+/* font */
+@import "./assets/CSS/font";
+
+/* mobile */
+// @import "./assets/CSS/mobile";
+
+/* tablet */
+// @media only screen and (min-width: 768px) {
+//   @import "./assets/CSS/tablet";
+// }
+// @media only screen and (min-width: 600px) and (max-width: 1280px) {
+//   @import "./assets/CSS/tablet.scss";
+// }
+
+
+/* desktop */
+@media only screen and (min-width: 1200px) {
+  @import "../FRONTEND/assets/CSS/desktop.scss";
+}
