@@ -1,52 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Nav() {
-const [isOpen, setIsOpen] = useState(false);
-
-const toggleMenu = () => {
-  setIsOpen(!isOpen);
-};
-
   return (
-    <nav className={`navbar ${isOpen ? 'open' : ''}`}>
-    {/* Half-circle button that opens/closes the navbar */}
-    <div className="hamburger-menu" onClick={toggleMenu}>
-        <div className="hamburger-bar"></div>
-        <div className="hamburger-bar"></div>
-        <div className="hamburger-bar"></div>    </div>
+    <nav className="navbar">
       {/* Navbar Links */}
-    {/* Navbar Links (Initially hidden, visible when 'isOpen' is true) */}
-    <ul className={`navigation ${isOpen ? 'show' : ''}`}>
+      <p className="nav-name-title"> Bianka Escoto </p>
+      <ul className="navigation">
         <li className="navbar-item">
-          <a href="#Home" >
-            Home
-          </a>
-        </li>   
-         {/*-------  */}
-         <li className="navbar-item">
-         <a href="#AboutMe" >
-            About me
-          </a>
-        </li>  
-        {/* --------- */}
-         <li className="navbar-item">
-         <a href="#Resume" >
-            Resume
-          </a>
-        </li>  
-         {/*----------  */}
-         <li className="navbar-item">
-         <a href="#Portfolio" >
-            Portfolio
-          </a>
-        </li> 
-          {/*-----------  */}
-          <li className="navbar-item">
-         <a href="#ContactMe" >
-            Contact me
-          </a>
+          <a href="#Home">Home</a>
         </li>
-        </ul>
+        <li className="navbar-item">
+          <a href="#AboutMe">About Me</a>
+        </li>
+        <li className="navbar-item">
+          <a href="#Resume">Resume</a>
+        </li>
+        <li className="navbar-item">
+          <a href="#Portfolio">Portfolio</a>
+        </li>
+        <li className="navbar-item">
+          <a href="#ContactMe">Contact Me</a>
+        </li>
+      </ul>
     </nav>
   );
 }
+

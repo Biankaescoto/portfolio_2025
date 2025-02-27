@@ -1,215 +1,55 @@
-/* Basic reset and body styling */
-// body {
-//     margin: 0;
-//     font-family: Arial, sans-serif;
-//     height: 100%;
-//   }
-  
-//   /* The navbar container */
-//   .navbar {
-//     position: fixed;
-//     top: 20px;
-//     right: 20px;
-//     z-index: 1000;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     width: 60px; /* Initial size of the navbar */
-//     height: 60px; /* Initial size */
-//     border-radius: 50%;
-//     transition: all 0.3s ease;
-//     background-color: #333; /* Initial background color */
-//     overflow: hidden; /* Ensure no content goes outside the quarter-circle */
-//   }
-  
-//   /* The hamburger menu icon */
-//   .hamburger-menu {
-//     width: 35px;
-//     height: 35px;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     align-items: center;
-//     cursor: pointer;
-//     position: relative;
-//   }
-  
-//   .hamburger-bar {
-//     width: 100%;
-//     height: 5px;
-//     background-color: white;
-//     border-radius: 5px;
-//     transition: transform 0.3s ease;
-//   }
-  
-//   /* When the menu is open, change the hamburger icon into a cross */
-//   .navbar.open .hamburger-bar:nth-child(1) {
-//     transform: translateY(10px) rotate(45deg);
-//   }
-  
-//   .navbar.open .hamburger-bar:nth-child(2) {
-//     opacity: 0;
-//   }
-  
-//   .navbar.open .hamburger-bar:nth-child(3) {
-//     transform: translateY(-10px) rotate(-45deg);
-//   }
-  
-//   /* Quarter-circle background expansion */
-//   .navbar.open {
-//     width: 300px; /* Expanded width of the quarter-circle */
-//     height: 300px; /* Expanded height of the quarter-circle */
-//     border-radius: 0 0 300px 0; /* Make the background a quarter-circle */
-//     background-color: #333; /* The background color of the expanded navbar */
-//   }
-  
-//   /* Navbar links (Initially hidden) */
-//   .navigation {
-//     list-style: none;
-//     padding: 0;
-//     margin: 0;
-//     display: flex;
-//     flex-direction: column;
-//     position: absolute;
-//     top: 20px;
-//     right: 20px;
-//     opacity: 0;
-//     visibility: hidden;
-//     transform: translateY(-20px);
-//     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-//   }
-  
-//   /* Show navbar links when the menu is open */
-//   .navbar.open .navigation {
-//     opacity: 1;
-//     visibility: visible;
-//     transform: translateY(0);
-//   }
-  
-//   /* Style each navbar item */
-//   .navbar-item {
-//     margin: 10px 0;
-//     font-size: 18px;
-//   }
-  
-//   .navbar-item a {
-//     text-decoration: none;
-//     color: white;
-//     font-weight: bold;
-//     padding: 5px 15px;
-//     transition: background-color 0.3s ease;
-//   }
-  
-//   /* Hover effect for navbar items */
-//   .navbar-item a:hover {
-//     background-color: #575757;
-//     border-radius: 5px;
-//   }
-
-/* Initial state of the navbar (before opening) */
 .navbar {
-  font-family: "Roboto Condensed", serif;
-    position: fixed;
-    top: 20px; /* Position at the bottom right corner */
-    right: 20px;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px; /* Initial size of the navbar */
-    height: 60px; /* Initial size */
-    border-radius: 50%; /* Make it a circle initially */
-    transition: all 0.3s ease;
-    // background-color: #d716aa; /* Initial background color */
-    overflow: hidden; /* Prevent content from going outside */
-  }
-  
-  /* When the navbar is open, expand into a quarter-circle from bottom-right */
-  .navbar.open {
-    width: 300px; /* Expanded width */
-    height: 300px; /* Expanded height */
-    border-radius: 0 0 0 300px; /* Create a quarter-circle from bottom-right */
-    background-color: #e469c5b8; /* The background color of the expanded navbar */
-    right: 0; /* Ensure it's positioned at the bottom-right corner */
-    top: 0; /* Keep it at the bottom-right corner */
-  }
-  
-  /* The hamburger icon */
-  .hamburger-menu {
-    width: 35px;
-    height: 35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    // position: relative;
-  }
-  
-  .hamburger-bar {
-    width: 100%;
-    height: 5px;
-    background-color: white;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-  }
-  
-  /* When the menu is open, change the hamburger icon into a cross */
-  .navbar.open .hamburger-bar:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
-  }
-  
-  .navbar.open .hamburger-bar:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .navbar.open .hamburger-bar:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
-  }
-  
-  /* Navbar links (Initially hidden) */
-  .navigation {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-20px);
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-  }
-  
-  /* Show navbar links when the menu is open */
-  .navbar.open .navigation {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  
-  /* Style each navbar item */
-  .navbar-item {
-    margin: 10px 0;
-    font-size: 18px;
-  }
-  
-  .navbar-item a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 5px 15px;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Hover effect for navbar items */
-  .navbar-item a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-  }
-  
-  
-  
-  
+  background-color: #3f3f4536;
+  padding: 5rem;
+border-bottom: 2px #353535;
+}
+
+.nav-name-title{
+  color: rgb(41, 41, 41);
+  text-decoration: none;
+  font-size: 90px;
+  padding: 0.5rem 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: bold;
+  text-align: flex-end;
+  flex-direction: column-reverse;
+  list-style: none;
+  display: flex;
+  justify-content:flex-start;
+  margin-top: 50px;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: -70px 25px 50px 25px;
+
+
+}
+.navbar-item a {
+  color: rgb(41, 41, 41);
+  text-decoration: none;
+  font-size: 60px;
+  // padding: 10px 25px 50px 25px;
+  margin-top:-20px;
+  margin-left:20px;
+  margin-right:20px;
+  margin-bottom:10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: bold;
+  text-align: flex-end;
+  flex-direction: column-reverse;
+  margin-left: auto;
+}
+
+/* Hover effect for links */
+.navbar-item a:hover {
+  color: #4671e7; /* Change text color on hover */
+}
+
+/* Active link */
+.navbar-item a.active {
+  color: #4671e7; /* Change text color for active link */
+}
+

@@ -1,12 +1,13 @@
 /* browser css reset */
-@import "../FRONTEND/assets/CSS/reset.scss";
+@use "../FRONTEND/assets/SCSS/reset";
+@use "../FRONTEND/assets/SCSS/desktop";
 
 // @tailwind base;
 // @tailwind components;
 // @tailwind utilities;
 
 /* font */
-@import "./assets/CSS/font";
+@use "./assets/SCSS/font";
 
 /* mobile */
 // @import "./assets/CSS/mobile";
@@ -20,7 +21,7 @@
 // }
 
 
-/* desktop */
-@media only screen and (min-width: 1200px) {
-  @import "../FRONTEND/assets/CSS/desktop.scss";
-}
+// /* desktop */
+// @media only screen and (min-width: 1200px) {
+//   @use "../FRONTEND/assets/CSS/desktop.scss";
+// }

@@ -4,6 +4,12 @@ import Nav from "../../components/Nav/nav";
 import Tiles from "../../components/tiles/tiles";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
+import { FaLinkedin } from "react-icons/fa";
+import { IoLogoGithub } from "react-icons/io";
+import { FaFileAlt } from "react-icons/fa";
+
+
+
 // TODO IMPORT TILES FOR PROJECTS. 
 // TODO IMPORT NAV BAR
 
@@ -23,7 +29,7 @@ export default function Landing() {
   
 
     const notifySuccess = () =>
-    toast.success("Got it! We will reach out to you!");
+    toast.success("Got it! I will reach out to you!");
     const notifyError = () => toast.error("Please fill out all fields.");
 
       // Validate if all fields are filled out
@@ -68,14 +74,10 @@ export default function Landing() {
 <main>
 <Nav/>
 <div className="landing-body"> 
-//! HOME
+
 <div id="Home"> 
-<h1 className="first-title"> 
-Welcome to my Page
-</h1>
 </div>
 {/* end of Home section */}
-//! ABOUT ME
 <div id="AboutMe">
 {/* <img> </img> */}
 <h1 className="about-me-title"> About me</h1>
@@ -98,11 +100,11 @@ Feel free to check out my LinkedIn, GitHub, or drop me an email—I’d love to 
  {/* end of about me section */}
 
 
- //! CONNECT LINKS
 <div className="Connect"> 
-<h1 className="connect-with-me-title"> Connect with me </h1>
+<h1 className="connect-with-me-title"> Connect </h1>
 <ul className="connect-list-group">
     <li className="connect-links">
+    <FaLinkedin className="link-sub-icon" />
         <a  
         href="https://www.linkedin.com/in/bianka-escoto-5213a3269" 
         target="_blank" 
@@ -111,6 +113,8 @@ Feel free to check out my LinkedIn, GitHub, or drop me an email—I’d love to 
          LinkedIn</a>
     </li>
     <li className="connect-links">
+    <IoLogoGithub  className="link-sub-icon"/>
+
         <a 
         href="https://github.com/Biankaescoto" 
         target="_blank" 
@@ -118,6 +122,8 @@ Feel free to check out my LinkedIn, GitHub, or drop me an email—I’d love to 
         > GitHub</a>
     </li>
     <li className="connect-links">
+    <FaFileAlt className="link-sub-icon" />
+
         <a  
         href="https://docs.google.com/document/d/1mehtyO89wumRrgv9Iadrc2NH-YPwZHk3Ro8G9efzkpY/edit?usp=sharing" 
         target="_blank" 
@@ -130,37 +136,24 @@ Feel free to check out my LinkedIn, GitHub, or drop me an email—I’d love to 
 
 
 
-//! PORTFOLIO
+{/* //! PORTFOLIO
 <div id="Portfolio">
 <Tiles/>
-</div>
+</div> */}
 {/* end of portfolio section */}
 
 
 
-//! FORM
 <div id="ContactMe"> 
         <h1 className="form-title">Contact Me</h1>
-        <p className="form-intro">
-          Feel free to reach out if you have any questions or if you'd like to
-          connect. I'm always happy to chat!
-        </p>
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="input-group">
             <input
              className="inputs_firstName"
               type="text"
-              placeholder="First Name"
+              placeholder="Your Name"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              required
-            />
-            <input
-             className="inputs_lastName"
-              type="text"
-              placeholder="Last Name"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
               required
             />
           </div>
@@ -172,16 +165,6 @@ Feel free to check out my LinkedIn, GitHub, or drop me an email—I’d love to 
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required/>
-          <select
-           className="inputs_select"
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-            required>
-            <option value="">Choose a Subject</option>
-            <option value="General Inquiry">General Inquiry</option>
-            <option value="Feedback">Feedback</option>
-            <option value="Other">Other</option>
-          </select>
           </div>
           <textarea
            className="textarea-container"
