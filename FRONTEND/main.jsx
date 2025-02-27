@@ -7,6 +7,9 @@ import React from "react";
 
 // importing Routes for paths
 import Landing from "../FRONTEND/routes/landing/landing";
+import Tiles from "../FRONTEND/components/tiles/tiles";
+import Nav from "../FRONTEND/components/Nav/nav";
+
 
 
 const router = createBrowserRouter([
@@ -23,5 +26,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <RouterProvider router={router} />
     </LanguageProvider> */}
       <Landing />
+      <Tiles />
+      <Nav />
+
   </React.StrictMode>
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//   <React.StrictMode>
+//     <RouterProvider router={router} />
+//   </React.StrictMode>
 );
