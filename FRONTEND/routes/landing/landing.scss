@@ -1,74 +1,109 @@
 .landing-body{
-// background-image:URL("background/pink.jpg");
 background-color: rgb(255, 255, 255);
 width:100%;
 height:100%;
 font-family: "Roboto Condensed", serif;
 
+// orbit name
+.about-container {
+    position: relative;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 200px;
+  }
+  
+  .about-title {
+    position: absolute;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 5; 
+    color:rgba(31, 31, 31, 0.917);
+    margin-top:-130px;
+  }
+  .about-sub-title{
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 300px;
+    z-index: 10; 
+    color:rgba(31, 31, 31, 0.917);
+    margin-top: 2%;
 
-.first-title{
-    color:rgb(52, 52, 56);
-    font-size:30px;
-    margin-top: 20px;
-    margin-bottom:20px; 
-}
+  }
+  
+  .orbit {
+    position: relative;
+    width: 10px;
+    height: 0px;
+    margin-top: 18%;
+//    margin-left: 00px;
 
+  }
+  
+  .orbit-icon {
+    position: absolute;
+    font-size: 50px;
+    top: 0;
+    left: 0;
+    transition: transform 0.8s linear, opacity 0.1s linear;
+    padding:5px;
+    color:rgb(0, 123, 255);
+  }
 
-#AboutMe{
-    background-color: #45454a14;
-    margin-top: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 14px;
-    padding: 20px;
-   
-
+#Vision{
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: rgba(78, 88, 109, 0.212);
+    border-radius: 10px;
+    padding:30px 30px 40px 30px;
 }
 
 // ABOUT ME
-.about-me-title{
-    color:rgb(52, 52, 56);
-    font-size:90px;
-    margin-top: 20px;
-    margin-bottom:20px; 
-    text-align: center;
-    margin-left: 30%;
-    margin-right:30%;
+.vision-title{
+    font-size:35px;
+    color:rgb(73 80 87 / var(--tw-text-opacity, 1));    
+    text-align: left; 
+    line-height: 1.6;  
+    margin: 5px auto; 
+    padding: 0 10%;   
 }
 
-.about-me-text {
-    text-align: center;
-    color:rgb(52, 52, 56);
-    font-size:40px;
-    margin-top: 20px;
-    margin-bottom:20px;
-    margin-left: 10%;
-    margin-right:10%;
-    margin-bottom: 20px;
+.vision-text {
+    text-align: left;  
+    color: rgb(73 80 87 / var(--tw-text-opacity, 1));    
+    font-size: 20px;
+    margin: 15px auto; 
+    padding: 0 10%;   
+}
+
+.connect-with-me-title{
+    color:rgba(31, 31, 31, 0.917);
+    font-size:50px;
+    margin-top: 100px;
+    margin-bottom:70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  
 }
 
 // CONNECT LINKS holder
 .connect-list-group{
-display:flex;
-margin-left: 50%;
-margin-right:50%;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
 }
 
-.connect-with-me-title{
-    display:flex;
-    margin-left: 50%;
-    margin-right:50%;
-    color:rgb(15, 15, 15);
-    font-size:100px;
-    margin-top: 20px;
-    margin-bottom:20px;
-    transform: translateX(-50%);
-  
-}
 
 .connect-links{
     color:rgb(10, 10, 10);
-    font-size:30px;
+    font-size:20px;
     margin-top: 20px;
     margin-bottom:20px; 
     font-style: none;
@@ -76,111 +111,149 @@ margin-right:50%;
 }
 
 a {
-    color:rgb(52, 52, 56);
+    color:rgb(32, 32, 34);
 text-decoration: none; 
 }
 
 .link-sub-icon{
-    font-size:100px;
-    margin-top: 20px;
-    margin-bottom:20px; 
+    font-size:50px;
+    margin-top: -50px;
+    margin-bottom:-30px; 
     font-style: none;
+    padding:30px;
+    &:hover {
+        background-color: rgb(146, 214, 214);
+        }
 }
+
+// certified section
+.certified-1 {
+    background-color: rgba(78, 88, 109, 0.212);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding: 60px 0; 
+  
+    .c1-title {
+      font-size: 50px;
+      color: rgb(73 80 87 / var(--tw-text-opacity, 1));
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  
+    .cert-img {
+      display: block;
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+      margin-bottom: 50px;
+    }
+  }
 
 // CONTACT FORM
 #ContactMe {
-    margin-top: 300px;
-    // margin-top:80px;
-    // max-width: 1900px; /* Center align with max-width */
-    // position: relative;
-    // z-index: 10;
-    // padding: 20px;
-    text-align: center;
-    // color: #f6f1f1;
-    // font-family: 'Trebuchet MS', sans-serif;
-    // background: rgba(255, 255, 255, 0.9); // Light frosted background
-    // border-radius: 8px;
-    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.342);
-    
-}
+    margin-top:20px;
+    text-align: center; 
+    margin-left: 25%;
+    margin-right:25%;
+
+    .input-label {
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        color: #1f1f1f;
+        margin-bottom: 8px;
+        text-align: left;
+        width: 100%;
+      }
 
 .form-title{
-    color:rgb(52, 52, 56);
-    font-size:90px;
-    margin-top: 20px;
-    margin-bottom:20px; 
+    color:rgba(31, 31, 31, 0.917);
+    font-size:50px;
+    margin-top: 100px;
     text-align: center;
-    margin-left: 30%;
-    margin-right:30%;
     margin-bottom: 120px;
 }
 
 .contact-form{
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    // gap: px;
     align-items: center;
+    // new code
+    width: 100%;  
+    margin: auto; 
 
 }
 
-.inputs_firstName{
-    flex: 1; /* Allow fields to take up equal space */
-    padding: 50px;
-    font-size: 70px;
-    color: #ffffff;
-    background-color: #3a3a3a37;
+// new code
+.inputs-container {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-bottom:20px;
+}
+
+
+// new code
+.inputs_firstName,
+.inputs_email {
+    padding: 10px;
+    font-size: 15px;
+    color:rgb(73 80 87 / var(--tw-text-opacity, 1));    
+    background-color: #e5e7eb;
     border: none;
-    width:670px;
-    // margin-right: 30px; /* Horizontal spacing between inputs */
-    border-radius: 30px;
-    width: 190%; 
-
-    
-
+    width: 100%; 
+    max-width: 1900px;
+    border-radius: 5px;
+    height:40px;
+    // margin-top: 0px;
+    margin-bottom: 30px;
 }
 
-.inputs_email{
-    flex: 1; /* Allow fields to take up equal space */
-    padding: 50px;
-    font-size: 70px;
-    background-color: #3a3a3a37;
-    border:none;
-    width:670px;
-    // margin-right: 30px; /* Horizontal spacing between inputs */
-    border-radius: 30px;
-    width: 190%; 
+.inputs_textarea {
+    padding: 10px;
+    font-size: 15px;
+    color: rgb(73 80 87 / var(--tw-text-opacity, 1));
+    background-color: #e5e7eb;
+    border: none;
+    width: 100%;
+    // max-width: 1900px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    resize: vertical; // or "none" if you don’t want resizing
+    min-height: 100px; // optional: gives better UX
+  }
+  
 
-}
-
-.textarea-container{
-    width: 40%; 
-    height: 250px;
-    padding: 15px;
-    font-size: 70px;
-    background-color: #3a3a3a37;
-    border:none;
-    border-radius: 30px;
-    
-
-    
-}
+.button-container {
+    width: 100%; // Match the width of other inputs
+    max-width: 1900px;
+    display: flex;
+    justify-content: flex-start; // Align to the left
+    margin-bottom: 100px;
+  }
+  
 
 .submit-button{
-    background-color: #4671e7; 
-    color:white;
-    padding: 20px 35px;
-    font-size: 50px;
-    cursor: pointer;
-    border:none;
-    border-radius: 30px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-right: 0; /* Remove large margin */
-    width: 400px; /* Make the button fit its content */
-
+        background-color: rgb(34 139 230 / var(--tw-bg-opacity, 1)); 
+        color: white;
+        padding: 20px 35px;
+        border: none;
+        font-size: 20px;
+        height: 50px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-family: 'Trebuchet MS', sans-serif;
+        width: 30%; // Or use a fixed width like 200px for consistency
+        margin-bottom: 100px;
+      
     &:hover {
-      background-color: #060303a9; /* Dark background on hover */
-      color: white; /* Light text color on hover */
+    background-color: rgb(146, 214, 214);
     }
 
+}
 }
 }

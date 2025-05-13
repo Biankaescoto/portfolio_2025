@@ -1,0 +1,107 @@
+.proj-fin{
+  font-family: "Roboto Condensed", serif;
+
+
+  .proj-t{
+    color:rgba(31, 31, 31, 0.781);
+    font-size: 45px;
+    text-align: center;
+    margin-top:60px;
+    }
+
+  .proj-desc{
+    color:rgba(0, 0, 0, 0.64);
+    font-size:20px;
+    text-align: center;
+    margin-left: 30%;
+    margin-right:30%;
+    margin-top:25px;
+
+  }
+}
+
+// grid style
+
+.row1 {  
+  // display grid has allowed me to move all tiles under 1 div.
+  display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3 tiles per row
+    gap: 30px; // spacing between tiles
+    padding: 30px;
+}
+
+
+.Project-tile {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    width:400px;
+    height:400px;
+    overflow: hidden; // Ensures child elements don't break the border-radius
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #5555551b;
+    font-family: "Roboto Condensed", serif;
+
+    .project-image {
+      height: 52%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; // <— No cropping, full image fits
+        display: block;
+      }
+    }
+
+    .second-half {
+    //   margin-top: 5rem;
+      // padding:1rem;
+  
+      .project-tile-name {
+        font-size: 30px;
+        font-weight: bold;
+        color:rgba(31, 31, 31, 0.917);
+        margin-top: 25px;
+        margin-left: 15px;
+
+      }
+  
+      .project-tile-desc {
+        // margin: .5rem 0;
+        font-size:15px;
+        color: rgb(44, 44, 46);
+        margin-top: 10px;
+        margin-left: 15px;
+
+
+      }
+  
+      .list-unit {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        margin-left: 15px;
+
+        .l-cont {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          gap: 1rem;
+          color: rgb(44, 44, 46);
+  
+          .L-1 {
+            font-size: 30px;
+            cursor: pointer;
+            color: rgb(44, 44, 46);
+  
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  

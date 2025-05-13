@@ -1,0 +1,119 @@
+.first-foot-div{
+    color:rgb(73 80 87 / var(--tw-text-opacity, 1));    
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    background-color: #e5e7eb;
+    border-top:#b6b8bd ;
+    height:100%;
+    width:100%;
+    flex:1;
+    padding: 1rem;
+    text-align: center;
+
+    .trio-Large-box{display: flex;
+  justify-content: space-between; // or center, or space-around
+  align-items: flex-start;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top:25px;
+
+
+        .box-one
+        
+        { 
+            .BE-footer{
+                color:rgb(73 80 87 / var(--tw-text-opacity, 1));    
+                font-size: 25px;
+
+            }
+            .BE-1{
+                color:rgb(73 80 87 / var(--tw-text-opacity, 1));    
+                font-size: 20px;
+                margin-top: 5%;   
+
+            }
+        }
+
+        .box-two{
+
+            .connect-footer{
+                color:rgb(73 80 87 / var(--tw-text-opacity, 1));    
+                font-size: 25px;
+
+
+            }
+
+            .footer-email{
+                color:rgb(73 80 87 / var(--tw-text-opacity, 1));    
+                font-size: 20px;
+                margin-top: 5%;   
+
+
+            }
+
+            .footer-cell{
+                color:rgb(73 80 87 / var(--tw-text-opacity, 1));    
+                font-size: 20px;               
+                 margin-top: 3%;   
+
+
+            }
+        }
+
+
+            .box-three{
+
+                .follow-title{
+                    color:rgb(73 80 87 / var(--tw-text-opacity, 1));    
+                    font-size: 25px;
+
+
+                }
+
+                .follow-links{
+                    color:rgb(73 80 87 / var(--tw-text-opacity, 1));    
+                    font-size:20px;
+                    margin-top: 10%;   
+
+
+                }
+
+                .fl1{
+                    color:rgb(73 80 87 / var(--tw-text-opacity, 1));    
+                    font-size: 20px;
+
+                }
+
+                .fl2{
+                    color:rgb(73 80 87 / var(--tw-text-opacity, 1));    
+                    font-size: 20px;
+                }
+            }
+
+        }
+
+        .line{
+            background-color:rgb(73 80 87 / var(--tw-text-opacity, 1));    
+            width: 85%;
+            height: 1px;
+            margin: 0 auto;
+            margin-top:1%;
+        }
+
+        .short-text{
+            color:rgb(73 80 87 / var(--tw-text-opacity, 1)); 
+            font-size: 20px;
+            }
+
+        .p-1{
+            color:rgb(73 80 87 / var(--tw-text-opacity, 1)); 
+            margin-top: 3%;   
+        }
+        .p-2{
+            color:rgb(73 80 87 / var(--tw-text-opacity, 1)); 
+            margin-top: 1%;   
+
+
+        }
+    }

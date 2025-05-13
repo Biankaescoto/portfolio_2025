@@ -1,19 +1,82 @@
 import ReactDOM from "react-dom/client";
 import React, {useState} from "react";
 import Nav from "../../components/Nav/nav";
-import Tiles from "../../components/tiles/tiles";
+// import Tiles from "../../components/tiles/tiles";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 import { FaLinkedin } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { FaFileAlt } from "react-icons/fa";
+import Footer from "../../components/footer/footer"
+
+// TODO ADD CERTIFICATE TO HOMEPAGE 
+// TODO LESSEN SPACE IN ORBIT CIRCLE
+// TODO FIX Margin-top in homepage
+
+// import for title orbit
+import { useEffect, useRef } from 'react';
+import {
+  FaReact, FaNodeJs, FaHtml5, FaGithub, FaCss3Alt, 
+} from 'react-icons/fa';
+import {
+  SiJavascript, SiMongodb, SiExpress, SiTailwindcss, SiSass
+} from 'react-icons/si';
+
+const icons = [
+  { icon: <SiJavascript />, name: 'javascript' },
+  { icon: <SiMongodb />, name: 'mongodb' },
+  { icon: <SiExpress />, name: 'express' },
+  { icon: <SiTailwindcss />, name: 'tailwind' },
+  { icon: <SiSass />, name: 'sass' },
+  { icon: <FaHtml5 />, name: 'html' },
+  { icon: <FaNodeJs />, name: 'node' },
+  { icon: <FaReact />, name: 'react' },
+  { icon: <FaGithub />, name: 'github' },
+  { icon: <FaCss3Alt />, name: 'css' },
+];
 
 
-
-// TODO IMPORT TILES FOR PROJECTS. 
-// TODO IMPORT NAV BAR
-
+// TODO fix contact form
 export default function Landing() {
+
+  // orbit
+  const orbitRef = useRef(null);
+
+  useEffect(() => {
+    const radius = 600;
+    let angle = 0;
+
+    const update = () => {
+      const children = orbitRef.current.children;
+      const count = children.length;
+      const spacingFactor = 0.9
+      angle += 0.01;
+
+      for (let i = 0; i < count; i++) {
+        const step = (2 * Math.PI) / count;
+        const a = i * step + angle;
+        // const a = (i * (2 * Math.PI) /count ) + angle;
+        const x = radius * Math.cos(a);
+        const z = radius * Math.sin(a); // depth
+
+        const scale = 1 + z / (2 * radius); // scale icon based on depth
+        const opacity = 0.5 + 0.5 * (z / radius); // lighter when far, darker when near
+        const zIndex = Math.round(z); // for overlap
+
+        const icon = children[i];
+        icon.style.transform = `translateX(${x}px) scale(${scale})`;
+        icon.style.opacity = opacity;
+        icon.style.zIndex = zIndex;
+      }
+
+      requestAnimationFrame(update);
+    };
+
+    update();
+  }, []);
+
+
+  // contact form
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
@@ -72,28 +135,35 @@ export default function Landing() {
 
     return (
 <main>
-<Nav/>
 <div className="landing-body"> 
+<Nav/>
 
+ {/* orbit title */}
+ <div className="about-container">
+      <h1 className="about-title">Bianka Escoto</h1>
+      <h2 className="about-sub-title"> Software Development Engineer </h2>
+      <div className="orbit" ref={orbitRef}>
+        {icons.map(({ icon, name }, i) => (
+          <div className="orbit-icon" key={i}>{icon}</div>
+        ))}
+      </div>
+    </div>
 <div id="Home"> 
 </div>
 {/* end of Home section */}
-<div id="AboutMe">
+<div id="Vision">
 {/* <img> </img> */}
-<h1 className="about-me-title"> About me</h1>
-<p className="about-me-text">
-Hi, I'm Bianka Escoto, a motivated and detail-oriented software engineer with a diverse background in customer service, sales, and project management. I recently graduated with a Software Engineering Certificate, and I’m excited to bring my technical expertise, problem-solving abilities, and passion for innovation into my work as a software engineer.
+<h1 className="vision-title"> About Me</h1>
+<p className="vision-text">
+Hi, I'm Bianka Escoto, a motivated and detail-oriented software engineer with a diverse background in customer service, sales, and project management. I’m excited to bring my technical expertise, problem-solving abilities, and passion for innovation into my work as a software engineer.
 </p>
-<p className="about-me-text"> 
-Throughout my career, I’ve had the opportunity to work in roles that required adaptability, clear communication, and effective decision-making. From de-escalating high-risk situations in customer service to managing complex projects, I’ve honed my ability to thrive in dynamic environments. As a bilingual professional, I’m able to connect with diverse teams and clients, making me well-suited for collaborative projects and global business environments.
+<p className="vision-text"> 
+In my development work, I specialize in front-end and back-end technologies like React, JavaScript, SCSS, CSS, Node.js, and MongoDB. I’m always looking to expand my skills and am driven by the opportunity to build solutions that enhance user experience and solve real-world problems.
 </p>
-<p className="about-me-text"> 
-In my development work, I specialize in front-end and back-end technologies like React, JavaScript, Node.js, and MongoDB. I’m always looking to expand my skills and am driven by the opportunity to build solutions that enhance user experience and solve real-world problems.
-</p>
-<p className="about-me-text"> 
+<p className="vision-text"> 
 I’m passionate about creating meaningful, efficient software solutions, and I believe that every challenge is an opportunity for growth. Whether it’s collaborating on a new project, learning a new language or framework, or finding innovative solutions to complex problems, I’m excited to contribute and make a positive impact.
 </p>
-<p className="about-me-text">
+<p className="vision-text">
 Feel free to check out my LinkedIn, GitHub, or drop me an email—I’d love to connect!
 </p>
 </div>
@@ -101,82 +171,91 @@ Feel free to check out my LinkedIn, GitHub, or drop me an email—I’d love to 
 
 
 <div className="Connect"> 
-<h1 className="connect-with-me-title"> Connect </h1>
+<h1 className="connect-with-me-title"> 
+Connect with Me!
+</h1>
 <ul className="connect-list-group">
     <li className="connect-links">
-    <FaLinkedin className="link-sub-icon" />
         <a  
         href="https://www.linkedin.com/in/bianka-escoto-5213a3269" 
         target="_blank" 
         rel="noopener noreferrer"
-        >
-         LinkedIn</a>
+        > <FaLinkedin className="link-sub-icon" /> </a>
     </li>
     <li className="connect-links">
-    <IoLogoGithub  className="link-sub-icon"/>
-
         <a 
         href="https://github.com/Biankaescoto" 
         target="_blank" 
         rel="noopener noreferrer"
-        > GitHub</a>
+        > <IoLogoGithub  className="link-sub-icon"/></a>
     </li>
     <li className="connect-links">
-    <FaFileAlt className="link-sub-icon" />
-
         <a  
         href="https://docs.google.com/document/d/1mehtyO89wumRrgv9Iadrc2NH-YPwZHk3Ro8G9efzkpY/edit?usp=sharing" 
         target="_blank" 
         rel="noopener noreferrer"
-        > Resume</a>
+        > <FaFileAlt className="link-sub-icon" /></a>
     </li>
 </ul>
 </div>
 {/* end of  Resume section */}
 
+{/* Certified section */}
 
-
-{/* //! PORTFOLIO
-<div id="Portfolio">
-<Tiles/>
-</div> */}
-{/* end of portfolio section */}
-
-
-
-<div id="ContactMe"> 
-        <h1 className="form-title">Contact Me</h1>
-        <form onSubmit={handleSubmit} className="contact-form">
-          <div className="input-group">
-            <input
-             className="inputs_firstName"
-              type="text"
-              placeholder="Your Name"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              required
-            />
-          </div>
-          <div className="inputs_container" > 
-          <input
-           className="inputs_email"
-            type="email"
-            placeholder="Your Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required/>
-          </div>
-          <textarea
-           className="textarea-container"
-            placeholder="Your Message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          ></textarea>
-          <button className="submit-button" type="submit">Send Message </button>
-        </form> 
+<div className="certified-1">
+  <div> 
+  <h1 className="c1-title"> Certified</h1>
+  <img  className="cert-img" src="/certifications/certificate.jpeg"  alt="certificate" />
+  </div>
 </div>
+<div id="ContactMe"> 
+  <h1 className="form-title">Get in Touch</h1>
+  <form onSubmit={handleSubmit} className="contact-form">
+    
+    <div className="inputs-container">
+      <label className="input-label" htmlFor="firstName">Name</label>
+      <input
+        className="inputs_firstName"
+        type="text"
+        placeholder="Your Name"
+        value={firstName}
+        onChange={(e) => setFirstName(e.target.value)}
+        required
+      />
+    </div>
+
+    <div className="inputs-container">
+      <label className="input-label" htmlFor="email">Email</label>
+      <input
+        className="inputs_email"
+        type="email"
+        placeholder="Your Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
+    </div>
+
+    <div className="inputs-container">
+      <label className="input-label" htmlFor="message">Message</label>
+      <textarea
+        className="inputs_textarea"
+        placeholder="Your Message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+        required
+      ></textarea>
+    </div>
+
+    <div className="button-container">
+      <button className="submit-button" type="submit">Send Message</button>
+    </div>
+    
+  </form> 
+</div>
+
 {/* end of contact me section DIV */}
+<Footer/>
 </div>
 </main>
 
