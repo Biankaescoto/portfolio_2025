@@ -1,62 +1,62 @@
-.tiles-big-body{
-   flex-direction: row; /* Stack the image and title vertically */
+// .tiles-big-body{
+//    flex-direction: row; /* Stack the image and title vertically */
 
 
-  //  second div line 51
-.tiles-full-body {
-    display: flex;
-    flex-direction: row; /* Stack the image and title vertically */
-    align-items: center;     /* Center the image and title horizontally */
-    text-align: center;      /* Center the text */
-    height:60px;
-    height:60px;
-  }
+//   //  second div line 51
+// .tiles-full-body {
+//     display: flex;
+//     flex-direction: row; /* Stack the image and title vertically */
+//     align-items: center;     /* Center the image and title horizontally */
+//     text-align: center;      /* Center the text */
+//     height:60px;
+//     height:60px;
+//   }
   
-  // img carousel div
-.tiles-image-cover-carousel {
-width:50px;
-height:50px;
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden;
-}
+//   // img carousel div
+// .tiles-image-cover-carousel {
+// width:50px;
+// height:50px;
+// display:flex;
+// justify-content:center;
+// align-items:center;
+// overflow:hidden;
+// }
 
 
-// img
-.carousel-image{
-//  width:80%;
-width:50px;
-height:50px;
-//  object-fit:contain;
-}
+// // img
+// .carousel-image{
+// //  width:80%;
+// width:50px;
+// height:50px;
+// //  object-fit:contain;
+// }
 
-// 2nd div inside first div on line 51
-.tiles-main-description{
+// // 2nd div inside first div on line 51
+// .tiles-main-description{
 
-}
+// }
 
-// h1 title in project description
-  .projectTitle {
-    font-family: "Roboto Condensed", serif;
-    font-size: 100px;
-    color:rgb(15, 14, 14);
-    margin-top:-80px;
-    // margin-top: -10px;  // Adjust the space above the title using negative margin
-    margin: 0;   /* Removes default margin from h1 */
-  }
+// // h1 title in project description
+//   .projectTitle {
+//     font-family: "Roboto Condensed", serif;
+//     font-size: 100px;
+//     color:rgb(15, 14, 14);
+//     margin-top:-80px;
+//     // margin-top: -10px;  // Adjust the space above the title using negative margin
+//     margin: 0;   /* Removes default margin from h1 */
+//   }
 
 
-  // project summary description for tile
-  .tiles-project-summary{
-    font-size: 35px;
-    color:rgb(161, 29, 29);
-  }
+//   // project summary description for tile
+//   .tiles-project-summary{
+//     font-size: 35px;
+//     color:rgb(161, 29, 29);
+//   }
 
-  // links for projects 
-  .tiles-links{
-    font-size: 35px;
-    color:rgb(131, 29, 29);
-  }
-}
+//   // links for projects 
+//   .tiles-links{
+//     font-size: 35px;
+//     color:rgb(131, 29, 29);
+//   }
+// }
   

@@ -2,3 +2,9 @@
 @use "../../routes/landing/landing" ;
 @use "../../components/Nav/nav";
 @use "../../components/tiles/tiles-desk";
+@use "../../components/footer/footer";
+@use "../../routes/Projects/Projects";
+@use "../../routes/Experience/experience";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+

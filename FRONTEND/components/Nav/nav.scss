@@ -1,43 +1,48 @@
+
+// Variables for easier maintenance
+$primary-text-color:rgb(73 80 87 / var(--tw-text-opacity, 1));    
+
+$hover-color: #4671e7;
+$base-font-size: 16px;
+
 .navbar {
-  background-color: #3f3f4536;
-  padding: 5rem;
-border-bottom: 2px #353535;
+  background-color: #e5e7eb;
+  ;
+  // padding: 1rem;
+  // border-bottom: 2rem solid #353535;
 }
 
-.nav-name-title{
-  color: rgb(41, 41, 41);
+.nav-name-title {
+  color: $primary-text-color;
   text-decoration: none;
-  font-size: 90px;
-  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  margin-left: 2.5rem;
+  // margin-top: 30px;
+  padding:5px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-style: bold;
+  font-weight: bold;
   text-align: flex-end;
+  display: flex;
   flex-direction: column-reverse;
   list-style: none;
-  display: flex;
-  justify-content:flex-start;
-  margin-top: 50px;
+  // margin-top: 3rem;
+  padding-top: 1.5rem;
 }
 
 .navigation {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  padding: -70px 25px 50px 25px;
-
-
+  padding: 0 1rem 2rem 1rem; // Corrected padding
 }
+
 .navbar-item a {
-  color: rgb(41, 41, 41);
+  color: $primary-text-color;
   text-decoration: none;
-  font-size: 60px;
-  // padding: 10px 25px 50px 25px;
-  margin-top:-20px;
-  margin-left:20px;
-  margin-right:20px;
-  margin-bottom:10px;
+  font-size: clamp(1rem, 4vw, 1rem); // Responsive link size
+  margin-right: 5rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-style: bold;
+  font-weight: bold;
   text-align: flex-end;
   flex-direction: column-reverse;
   margin-left: auto;
@@ -45,11 +50,18 @@ border-bottom: 2px #353535;
 
 /* Hover effect for links */
 .navbar-item a:hover {
-  color: #4671e7; /* Change text color on hover */
+  color: $hover-color;
 }
 
 /* Active link */
 .navbar-item a.active {
-  color: #4671e7; /* Change text color for active link */
+  color: $hover-color;
+}
+
+/* Global fixes for Safari */
+body {
+  -webkit-text-size-adjust: 100%; // Prevent Safari text zoom issues
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
