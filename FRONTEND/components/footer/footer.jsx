@@ -37,7 +37,7 @@ export default function Footer() {
                     rel="noopener noreferrer">
                     <FaLinkedin className="linked-in"/>
                 </a>
-                {/*  */}
+                
                 <a className="fl2" href="https://github.com/Biankaescoto" 
                 target="_blank" 
                 rel="noopener noreferrer"

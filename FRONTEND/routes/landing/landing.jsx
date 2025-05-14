@@ -9,9 +9,6 @@ import { IoLogoGithub } from "react-icons/io";
 import { FaFileAlt } from "react-icons/fa";
 import Footer from "../../components/footer/footer"
 
-// TODO ADD CERTIFICATE TO HOMEPAGE 
-// TODO LESSEN SPACE IN ORBIT CIRCLE
-// TODO FIX Margin-top in homepage
 
 // import for title orbit
 import { useEffect, useRef } from 'react';
@@ -77,15 +74,13 @@ export default function Landing() {
 
 
   // contact form
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
   
     // Handle success and error toasts
-    // const notifySuccess = () => toast.success("Your message has been sent successfully!");
-    // const notifyError = () => toast.error("Please fill out all fields.");
+    const notifySuccess = () => toast.success("Your message has been sent successfully!");
+    const notifyError = () => toast.error("Please fill out all fields.");
   
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -96,7 +91,7 @@ export default function Landing() {
     const notifyError = () => toast.error("Please fill out all fields.");
 
       // Validate if all fields are filled out
-      if (!firstName || !lastName || !email || !subject || !message) {
+      if (!name || !email || !message) {
         notifyError(); // Show error if fields are missing
         return;
       }
@@ -106,10 +101,8 @@ export default function Landing() {
       const publicKey = "czjyf1UOHYMGOKZVf";  // Your EmailJS public key
   
       const templateParams = {
-        from_firstName: firstName,
-        from_lastName: lastName,
+        from_name: name,
         from_email: email,
-        from_subject: subject,
         message: message,
         to_name: "Bianka Escoto", 
       };
@@ -121,10 +114,8 @@ export default function Landing() {
           console.log("Email sent successfully!", response);
           notifySuccess();  // Show success toast
           // Clear the form after submission
-          setFirstName("");
-          setLastName("");
+          setName("");
           setEmail("");
-          setSubject("");
           setMessage("");
         })
         .catch((error) => {
@@ -208,6 +199,7 @@ Connect with Me!
   <img  className="cert-img" src="/certifications/certificate.jpeg"  alt="certificate" />
   </div>
 </div>
+{/* contact form */}
 <div id="ContactMe"> 
   <h1 className="form-title">Get in Touch</h1>
   <form onSubmit={handleSubmit} className="contact-form">
@@ -215,11 +207,12 @@ Connect with Me!
     <div className="inputs-container">
       <label className="input-label" htmlFor="firstName">Name</label>
       <input
+      // dont change classname for firstName even tho variable has been changed
         className="inputs_firstName"
         type="text"
         placeholder="Your Name"
-        value={firstName}
-        onChange={(e) => setFirstName(e.target.value)}
+        value={name}
+        onChange={(e) => setName(e.target.value)}
         required
       />
     </div>
