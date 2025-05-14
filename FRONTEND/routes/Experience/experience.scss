@@ -1,0 +1,121 @@
+.experience-body{
+    font-family: "Roboto Condensed", serif;
+
+
+    .Prof-body{
+        font-family: "Roboto Condensed", serif;
+
+        .Prof-title{
+            font-family: "Roboto Condensed", serif;
+            font-size: 40px;
+            text-align: center;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            font-weight: 600;
+            color:rgba(31, 31, 31, 0.781);
+
+
+        }
+
+// beginning of first grid
+        .prof-tile-group-grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); // 3 tiles per row
+            gap: 40px; // spacing between tiles
+            padding: 30px;
+            margin-left: 5%;
+            margin-right:5%;
+
+        }
+        .journey-tile{
+            background-color: rgba(128, 128, 128, 0.163);
+            border-radius: 5px;
+            // box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+
+            .j-emoji{
+                margin-top: 30px;
+                margin-left: 20px;
+                font-size: 50px;
+            }
+
+            .tile-title{
+                margin-top: 30px;
+                margin-left: 20px;
+                color:rgba(31, 31, 31, 0.781);
+                font-size: 30px;
+                font-weight: 600;
+
+         }
+
+         .tile-job{
+            margin-top: 20px;
+            margin-left: 20px;
+            color:rgba(31, 31, 31, 0.781);
+            font-size: 25px;
+            font-weight: 500;
+
+         }
+
+         .tile-date{
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            color:rgba(31, 31, 31, 0.781);
+            font-size: 22px;
+            font-weight: 600;
+
+         }
+        }
+
+        // beginning of education grid
+        .education{
+
+            .education-title{
+            font-family: "Roboto Condensed", serif;
+            font-size: 40px;
+            text-align: center;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            font-weight: 600;
+            color:rgba(31, 31, 31, 0.781);
+            }
+        }
+
+        .education-grid-body{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); // 3 tiles per row
+            gap: 40px; // spacing between tiles
+            padding: 30px;
+            margin-left: 5%;
+            margin-right:5%;
+            margin-bottom: 7%;
+
+            .edu-tile-2{
+                background-color: rgba(128, 128, 128, 0.163);
+                border-radius: 5px;
+            }
+
+            .edu-emoji{
+                margin-top: 30px;
+                margin-left: 20px;
+                font-size: 50px;
+            }
+            .t-111{
+                margin-top: 30px;
+                margin-left: 20px;
+                color:rgba(31, 31, 31, 0.781);
+                font-size: 30px;
+                font-weight: 600;
+            }
+
+            .t-222{
+                margin-top: 20px;
+                margin-left: 20px;
+                color:rgba(31, 31, 31, 0.781);
+                font-size: 25px;
+                font-weight: 500;
+                margin-bottom:45px;
+            }
+        }
+    }
+}
