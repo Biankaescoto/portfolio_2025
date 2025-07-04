@@ -5,6 +5,9 @@ import React from 'react';
 import Nav from '../../components/Nav/nav';
 import Footer from "../../components/footer/footer";
 import { IoLogoGithub } from "react-icons/io";
+import { ExternalLink } from 'lucide-react';
+
+
 
 export default function Projects() {
     return(
@@ -37,9 +40,9 @@ export default function Projects() {
         rel="noopener noreferrer"
         > <IoLogoGithub/></a>
                 </li>
-                <li className="L-1"> 
+                {/* <li className="L-1"> 
                 link
-                </li>
+                </li> */}
             </ul>
         </div>
         </div>
@@ -65,9 +68,9 @@ export default function Projects() {
         rel="noopener noreferrer"
         > <IoLogoGithub/></a>
                 </li>
-                <li className="L-1"> 
+                {/* <li className="L-1"> 
                 link
-                </li>
+                </li> */}
             </ul>
         </div>
         </div>
@@ -92,9 +95,9 @@ export default function Projects() {
         rel="noopener noreferrer"
         > <IoLogoGithub/></a>
                 </li>
-                <li className="L-1"> 
+                {/* <li className="L-1"> 
                 link
-                </li>
+                </li> */}
             </ul>
         </div>
         </div>
@@ -121,8 +124,13 @@ export default function Projects() {
         rel="noopener noreferrer"
         > <IoLogoGithub/></a>
                 </li>
-                <li className="L-1"> 
-                link
+                <li className="L-1">
+                  <a href=" https://iglesiademilagros.org/"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  > 
+                <ExternalLink style={{ marginRight: '0.5rem' }} />
+                </a>
                 </li>
             </ul>
         </div>
@@ -134,12 +142,12 @@ export default function Projects() {
     <div className="Project-tile">
         {/* first div is image */}
         <div className="project-image"> 
-        <img  src="/placeholder/pink.jpg" alt="church" />
+        <img  src="/guessthenumber/guess.jpeg" alt="church" />
         </div>
         {/* second div is title  */}
         <div className="second-half"> 
         <h1 className="project-tile-name"> Guess the number </h1>
-        <p className="project-tile-desc"> </p>
+        <p className="project-tile-desc"> A fun, interactive game built with React, JavaScript, and SCSS. Guess the computer’s number in Classic Mode, or let the computer guess yours in Reverse Mode. Styled with custom SCSS and responsive design. </p>
         {/* third div = links */}
         <div className="list-unit"> 
             <ul className="l-cont">
@@ -150,9 +158,9 @@ export default function Projects() {
         rel="noopener noreferrer"
         > <IoLogoGithub/></a>
                 </li>
-                <li className="L-1"> 
+                {/* <li className="L-1"> 
                 link
-                </li>
+                </li> */}
             </ul>
         </div>
         </div>
@@ -178,9 +186,9 @@ export default function Projects() {
         rel="noopener noreferrer"
         > <IoLogoGithub/></a>
                 </li>
-                <li className="L-1"> 
+                {/* <li className="L-1"> 
                 link
-                </li>
+                </li> */}
             </ul>
         </div>
         </div>
