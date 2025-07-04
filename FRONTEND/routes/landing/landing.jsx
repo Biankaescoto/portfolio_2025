@@ -163,7 +163,7 @@ Feel free to check out my LinkedIn, GitHub, or drop me an email—I’d love to 
 
 <div className="Connect"> 
 <h1 className="connect-with-me-title"> 
-Connect with Me!
+Connect with Me
 </h1>
 <ul className="connect-list-group">
     <li className="connect-links">
@@ -182,7 +182,7 @@ Connect with Me!
     </li>
     <li className="connect-links">
         <a  
-        href="https://docs.google.com/document/d/1mehtyO89wumRrgv9Iadrc2NH-YPwZHk3Ro8G9efzkpY/edit?usp=sharing" 
+        href="https://docs.google.com/document/d/1U49N2z6A6WGKfQ44oRzmVOoRBI8bNLMK245ufuw5csU/edit?usp=sharing" 
         target="_blank" 
         rel="noopener noreferrer"
         > <FaFileAlt className="link-sub-icon" /></a>

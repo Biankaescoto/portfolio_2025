@@ -23,7 +23,7 @@ export default function Experience() {
 <h1 className="j-emoji"> 🏢 </h1>
 <h1 className="tile-title"> Welcome church Internship</h1>
 <h2 className="tile-job"> web developer/ lead tech </h2>
-<h3 className="tile-date"> 2024-2025 </h3>
+<h3 className="tile-date"> 2024 </h3>
 </div>
 {/* second tile */}
 <div className="journey-tile" > 
