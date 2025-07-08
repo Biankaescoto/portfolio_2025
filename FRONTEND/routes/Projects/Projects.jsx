@@ -35,7 +35,7 @@ export default function Projects() {
             <ul className="l-cont">
                 <li className="L-1">
                 <a 
-        href="https://github.com/Biankaescoto" 
+        href="https://github.com/Biankaescoto/Chat.git" 
         target="_blank" 
         rel="noopener noreferrer"
         > <IoLogoGithub/></a>
@@ -63,7 +63,7 @@ export default function Projects() {
             <ul className="l-cont">
                 <li className="L-1">
                 <a 
-        href="https://github.com/Biankaescoto" 
+        href="https://github.com/PMWeaver4/Champion-Library-App.git" 
         target="_blank" 
         rel="noopener noreferrer"
         > <IoLogoGithub/></a>
@@ -90,7 +90,7 @@ export default function Projects() {
             <ul className="l-cont">
                 <li className="L-1">
                 <a 
-        href="https://github.com/Biankaescoto" 
+        href="https://github.com/Biankaescoto/portfolio_2025.git" 
         target="_blank" 
         rel="noopener noreferrer"
         > <IoLogoGithub/></a>
@@ -119,7 +119,7 @@ export default function Projects() {
             <ul className="l-cont">
                 <li className="L-1">
                 <a 
-        href="https://github.com/Biankaescoto" 
+        href="https://github.com/Biankaescoto/NewChurchSite/tree/main/FRONTEND%F0%9F%9A%80" 
         target="_blank" 
         rel="noopener noreferrer"
         > <IoLogoGithub/></a>
@@ -153,7 +153,7 @@ export default function Projects() {
             <ul className="l-cont">
                 <li className="L-1">
                 <a 
-        href="https://github.com/Biankaescoto" 
+        href="https://github.com/Biankaescoto/GuessTheNumber.git" 
         target="_blank" 
         rel="noopener noreferrer"
         > <IoLogoGithub/></a>
@@ -181,7 +181,7 @@ export default function Projects() {
             <ul className="l-cont">
                 <li className="L-1">
                 <a 
-        href="https://github.com/Biankaescoto" 
+        href="https://github.com/uprighted-learners/jeopardy-board-Biankaescoto.git" 
         target="_blank" 
         rel="noopener noreferrer"
         > <IoLogoGithub/></a>
