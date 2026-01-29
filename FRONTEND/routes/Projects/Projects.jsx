@@ -21,6 +21,34 @@ export default function Projects() {
     <h3 className="proj-desc"> Explore my portfolio of projects, showcasing innovative solutions, modern design, and technical expertise across front-end, back-end, and full-stack development. </h3>
 </div>
 <div className="row1"> 
+    {/* beginning of pupusa websire */}
+     <div className="Project-tile">
+        {/* first div is image */}
+        <div className="project-image"> 
+        <img  src="/placeholder/rename.jpeg" />
+        </div>
+        {/* second div is title  */}
+        <div className="second-half"> 
+        <h1 className="project-tile-name"> Pupusa Website</h1>
+        <p className="project-tile-desc"> A bilingual (English/Spanish) food ordering website that allows users to browse a pupusa menu, add items to a shopping cart, select a pickup date and time, and complete checkout. This project focuses on creating an intuitive user experience while supporting multilingual accessibility for a diverse customer base.</p>
+        {/* third div = links */}
+        <div className="list-unit"> 
+            <ul className="l-cont">
+                <li className="L-1">
+                {/* <a 
+        href="https://github.com/Biankaescoto/Chat.git" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        > <IoLogoGithub/></a> */}
+                </li>
+                {/* <li className="L-1"> 
+                link
+                </li> */}
+            </ul>
+        </div>
+        </div>
+    </div>
+    {/* end of pupusa website */}
     <div className="Project-tile">
         {/* first div is image */}
         <div className="project-image"> 
