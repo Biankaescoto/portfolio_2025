@@ -4,7 +4,6 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
-
 // importing Routes for paths
 import Landing from "../FRONTEND/routes/landing/landing";
 import Experience from "../FRONTEND/routes/Experience/experience";

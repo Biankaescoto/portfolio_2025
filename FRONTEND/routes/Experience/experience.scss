@@ -7,11 +7,11 @@
 
         .Prof-title{
             font-family: "Roboto Condensed", serif;
-            font-size: 40px;
+            font-size: 35px;
             text-align: center;
-            margin-top: 5%;
-            margin-bottom: 5%;
-            font-weight: 600;
+            margin-top: 10%;
+            margin-bottom: 10%;
+            font-weight: 400;
             color:rgba(31, 31, 31, 0.781);
 
 
@@ -28,7 +28,9 @@
 
         }
         .journey-tile{
-            background-color: rgba(128, 128, 128, 0.163);
+            // background-color: rgba(128, 128, 128, 0.163);
+                background-color: #7070bd1b;
+
             border-radius: 5px;
             // box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 
@@ -43,7 +45,7 @@
                 margin-left: 20px;
                 color:rgba(31, 31, 31, 0.781);
                 font-size: 30px;
-                font-weight: 600;
+                font-weight: 400;
 
          }
 
@@ -52,7 +54,7 @@
             margin-left: 20px;
             color:rgba(31, 31, 31, 0.781);
             font-size: 25px;
-            font-weight: 500;
+            font-weight: 400;
 
          }
 
@@ -76,7 +78,7 @@
             text-align: center;
             margin-top: 5%;
             margin-bottom: 5%;
-            font-weight: 600;
+            // font-weight: 400;
             color:rgba(31, 31, 31, 0.781);
             }
         }
@@ -91,7 +93,9 @@
             margin-bottom: 7%;
 
             .edu-tile-2{
-                background-color: rgba(128, 128, 128, 0.163);
+                // background-color: rgba(128, 128, 128, 0.163);
+                    background-color: #7070bd1b;
+
                 border-radius: 5px;
             }
 
@@ -105,7 +109,7 @@
                 margin-left: 20px;
                 color:rgba(31, 31, 31, 0.781);
                 font-size: 30px;
-                font-weight: 600;
+                font-weight: 400;
             }
 
             .t-222{
@@ -113,7 +117,7 @@
                 margin-left: 20px;
                 color:rgba(31, 31, 31, 0.781);
                 font-size: 25px;
-                font-weight: 500;
+                font-weight: 400;
                 margin-bottom:45px;
             }
         }
