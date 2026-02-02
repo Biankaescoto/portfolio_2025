@@ -43,7 +43,12 @@ export default function Nav() {
   return (
     <nav className="navbar">
       {/* Navbar Links */}
+    <NavLink  className="Bianka" to="/Landing">
+      <div>
       <p className="nav-name-title"> Bianka Escoto </p>
+      </div>
+    </NavLink>
+
       <ul className="navigation">
         <li className="navbar-item">
         <NavLink to="/Landing" > Home </NavLink>
